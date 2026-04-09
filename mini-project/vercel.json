@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "backend/api/predict.py", "use": "@vercel/python" },
+    { "src": "backend/api/feedback.py", "use": "@vercel/python" },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "src": "/api/predict", "dest": "/backend/api/predict.py" },
+    { "src": "/api/feedback", "dest": "/backend/api/feedback.py" },
+    { "src": "/(.*)", "dest": "/frontend/$1" }
+  ],
+  "env": { "PYTHON_VERSION": "3.12.0" }
+}
