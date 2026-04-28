@@ -19,6 +19,11 @@ __pycache__
 .env.development.local
 .env.test.local
 .env.production.local
+backend/.env
+
+# frontend source build artifacts
+frontend/build
+frontend/node_modules
 
 
 npm-debug.log*
