@@ -9,9 +9,6 @@ __pycache__
 # testing
 /coverage
 
-# production
-/frontend/build
-
 # misc
 .DS_Store
 .env
@@ -21,8 +18,7 @@ __pycache__
 .env.production.local
 backend/.env
 
-# frontend source build artifacts
-frontend/build
+# dependencies only
 frontend/node_modules
 
 
